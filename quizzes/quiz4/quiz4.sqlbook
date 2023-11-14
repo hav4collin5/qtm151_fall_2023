@@ -6,7 +6,7 @@
 <font size = "5">
 Write your Emory ID as a comment (use double dash)
 -- SQLBook: Code
-
+-- 2457321
 -- SQLBook: Markup
 <font size = "5" >
 This quiz is open book 
@@ -21,7 +21,7 @@ Write the following message as a comment: <br>
 "I will abide by Emory's code of conduct"
 
 -- SQLBook: Code
-
+-- I will abide by Emory's code of conduct
 -- SQLBook: Markup
 
 <font size = "5">
@@ -52,7 +52,29 @@ the image and following the instructions in Lecture 16
 HINT: Include any column names with upper case in doube quotations, <br> e.g.
 "raceId". If you don't you'll get an error
 -- SQLBook: Code
+-- Active: 1698606630689@@127.0.0.1@5432@formula1
 -- Write your own code
+-- Activate the database (assuming you are using a system like MySQL where you select a database with this command)
+
+-- Drop the table if it exists
+DROP TABLE IF EXISTS lap_times;
+
+-- Create the new table with the specified structure
+CREATE TABLE lap_times (
+  raceId int,
+  driverId int,
+  lap int,
+  position int,
+  time varchar(255),
+  milliseconds int
+);
+
+-- Add the rows with the provided data
+INSERT INTO lap_times (raceId, driverId, lap, position, time, milliseconds) VALUES
+(841, 20, 1, 1, '01:38.1', 98109),
+(167, 64, 48, 10, '01:14.0', 73984),
+(341, 3, 65, 13, '01:29.6', 89626);
+
 -- SQLBook: Code
 -- Write your own code
 -- SQLBook: Markup
@@ -85,7 +107,13 @@ HINT: Remember to always refer to column names with at <br>
 least one capital letter with double quotations, e.g. "driverId" <br>
 HINT: See Lecture 16
 -- SQLBook: Code
+-- Active: 1698606630689@@127.0.0.1@5432@formula1
 -- Write your own code
+SELECT *
+FROM "pit_stops"
+WHERE "lap" >= 1 AND "lap" <= 5
+ORDER BY "milliseconds" ASC;
+
 -- SQLBook: Markup
 <font size = "5">
 
