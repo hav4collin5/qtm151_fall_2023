@@ -6,6 +6,7 @@
 <font size = "5">
 Write your Emory ID as a comment (use double dash)
 -- SQLBook: Code
+-- Active: 1699981488947@@127.0.0.1@5432@formula1
 -- 2457321
 -- SQLBook: Markup
 <font size = "5" >
@@ -21,6 +22,7 @@ Write the following message as a comment: <br>
 "I will abide by Emory's code of conduct"
 
 -- SQLBook: Code
+-- Active: 1699981488947@@127.0.0.1@5432@formula1
 -- I will abide by Emory's code of conduct
 -- SQLBook: Markup
 
@@ -52,7 +54,7 @@ the image and following the instructions in Lecture 16
 HINT: Include any column names with upper case in doube quotations, <br> e.g.
 "raceId". If you don't you'll get an error
 -- SQLBook: Code
--- Active: 1698606630689@@127.0.0.1@5432@formula1
+-- Active: 1699981488947@@127.0.0.1@5432@formula1
 -- Write your own code
 -- Activate the database (assuming you are using a system like MySQL where you select a database with this command)
 
@@ -107,12 +109,13 @@ HINT: Remember to always refer to column names with at <br>
 least one capital letter with double quotations, e.g. "driverId" <br>
 HINT: See Lecture 16
 -- SQLBook: Code
--- Active: 1698606630689@@127.0.0.1@5432@formula1
+-- Active: 1699981488947@@127.0.0.1@5432@formula1
 -- Write your own code
 SELECT *
-FROM "pit_stops"
-WHERE "lap" >= 1 AND "lap" <= 5
+FROM pit_stops
+WHERE lap >= 1 AND lap <= 5
 ORDER BY "milliseconds" ASC;
+
 
 -- SQLBook: Markup
 <font size = "5">
